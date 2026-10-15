@@ -1,0 +1,75 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { GAMES, LINKS } from '../data/site';
+---
+<Layout>
+  <main>
+    <!-- hero: featured game, muted trailer loop -->
+    <section class="vhero">
+      <video
+        class="vhero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="/images/hero-poster.jpg"
+        aria-hidden="true"
+      >
+        <source src="/video/hero-loop.mp4" type="video/mp4" />
+      </video>
+      <div class="vhero-shade" aria-hidden="true"></div>
+      <div class="container vhero-inner">
+        <p class="eyebrow">Coming to Steam · Demo out now</p>
+        <h1 class="vhero-title">
+          Roll into the world of<br /><span class="accent-text">Seferia Matrix</span>
+        </h1>
+        <div class="btn-row">
+          <a class="btn btn--solid" href={LINKS.steamDemo} target="_blank" rel="noopener">Play the Demo</a>
+          <a class="btn btn--ghost" href={LINKS.steam} target="_blank" rel="noopener">Wishlist on Steam</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- our games -->
+    <section class="section games" id="games">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="h1">Our <span class="accent-text">Games</span></h2>
+          <p class="section-sub">Games you remember. Worlds that grow.</p>
+        </div>
+        <p class="lead measure reveal" data-delay="1">
+          From a co-op survivors game on mobile to a dice roguelike deckbuilder
+          on PC — fun, memorable games, each the start of a bigger world.
+        </p>
+
+        <div class="packshots">
+          {GAMES.map((g, i) => (
+            <article class="packshot reveal" data-delay={String(i + 1)}>
+              {g.slug ? (
+                <a class="packshot-art" href={g.slug} aria-label={g.title}>
+                  <img src={g.packshot} alt={`${g.title} key art`} loading="lazy" />
+                </a>
+              ) : (
+                <div class="packshot-art packshot-art--logo">
+                  <div class="logo-lockup">
+                    <img src={g.logo} alt={g.title} loading="lazy" />
+                    {g.subtitle && <span class="logo-sub" aria-hidden="true">{g.subtitle}</span>}
+                  </div>
+                  {g.status && <span class="status-badge">{g.status}</span>}
+                </div>
+              )}
+              <p class="packshot-tag">{g.tag}</p>
+              <ul class="chips">
+                {g.platforms.map((p) => (
+                  <li>{p.href ? <a href={p.href} target="_blank" rel="noopener">{p.label}</a> : <span>{p.label}</span>}</li>
+                ))}
+              </ul>
+              {g.slug && <a class="btn btn--ghost" href={g.slug}>Game Page</a>}
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

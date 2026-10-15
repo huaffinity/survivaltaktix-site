@@ -1,0 +1,73 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { TIMELINE, SELECTIONS } from '../data/site';
+const title = 'The Studio — SurvivalTaktix';
+const description =
+  'SurvivalTaktix is an independent game studio in Seongnam, South Korea. Games you remember. Worlds that grow.';
+---
+<Layout title={title} description={description}>
+  <main>
+    <!-- hero -->
+    <section class="shero">
+      <div class="shero-art" aria-hidden="true">
+        <img src="/images/seferia-hero.jpg" alt="" />
+        <img src="/images/st-packshot.jpg" alt="" />
+      </div>
+      <div class="container shero-inner">
+        <h1 class="display">Games you remember.<br /><span class="accent-text">Worlds that grow.</span></h1>
+        <p class="eyebrow shero-sign">// Independent game studio · Seongnam, Korea</p>
+      </div>
+    </section>
+
+    <!-- who we are -->
+    <section class="section">
+      <div class="container">
+        <div class="panel reveal">
+          <p class="eyebrow">Who we are</p>
+          <p class="lead">
+            We make games that are fun to play and hard to forget — and grow each
+            one into a world with room for more.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- timeline -->
+    <section class="section--tight">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="h1">How we <span class="accent-text">got here</span></h2>
+                  </div>
+        <ol class="timeline">
+          {TIMELINE.map((t) => (
+            <li class="reveal">
+              <span class="tl-year">{t.year}</span>
+              <h3>{t.title}</h3>
+              <p>{t.body}</p>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+
+    <!-- recognition -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="h1">Festival <span class="accent-text">selections</span></h2>
+                  </div>
+        <div class="selections">
+          {SELECTIONS.map((s, i) => (
+            <figure class="selection reveal" data-delay={String(i)}>
+              <div class="selection-logo"><img src={s.logo} alt={`${s.name} logo`} loading="lazy" /></div>
+              <figcaption>
+                <b>{s.name}</b>
+                <span>{s.detail}</span>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

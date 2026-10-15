@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { LINKS } from '../data/site';
+const title = 'Contact — SurvivalTaktix';
+const description =
+  'Get in touch with SurvivalTaktix about feedback, media inquiries, or partnership opportunities.';
+const REASONS = [
+  { label: 'Feedback', subject: 'Feedback' },
+  { label: 'Media Inquiry', subject: 'Media Inquiry' },
+  { label: 'Partnership', subject: 'Partnership Opportunity' },
+];
+const mailto = (subject: string) =>
+  `mailto:${LINKS.email}?subject=${encodeURIComponent(`[${subject}] `)}`;
+---
+<Layout title={title} description={description}>
+  <main>
+    <section class="section contact">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <h1 class="display">Get in<br /><span class="accent-text">touch</span></h1>
+          <p class="body-dim contact-copy">
+            We would like to hear from you. Contact us about feedback, media
+            inquiries, partnership opportunities, or anything else
+            SurvivalTaktix related.
+          </p>
+        </div>
+
+        <div class="contact-panel reveal" data-delay="1">
+          <p class="eyebrow">Choose a reason</p>
+          <ul class="reasons">
+            {REASONS.map((r) => (
+              <li>
+                <a href={mailto(r.subject)}>
+                  <span>{r.label}</span><span class="arrow" aria-hidden="true">→</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+          <p class="contact-mail">
+            Or write to <a href={`mailto:${LINKS.email}`}>{LINKS.email}</a>
+          </p>
+          <p class="body-dim contact-note">
+            Press kits and fact sheets live on each game’s page:
+            <a href="/seferia-matrix#press">Seferia Matrix</a> ·
+            <a href="/survive-together#press">Survive Together</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

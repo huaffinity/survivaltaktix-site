@@ -1,0 +1,102 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { LINKS } from '../data/site';
+const title = 'Seferia Matrix — SurvivalTaktix';
+const description =
+  'A dice roguelike deckbuilder: lock & roll five dice to cast spells and build a deck of 300+ upgrades to explode your damage. Demo out now on Steam.';
+---
+<Layout title={title} description={description} ogImage="/images/seferia-header.jpg">
+  <main data-accent="seferia">
+    <!-- hero -->
+    <section class="ghero">
+      <div class="ghero-art" aria-hidden="true">
+        <img src="/images/seferia-hero.jpg" alt="" />
+      </div>
+      <div class="container ghero-inner">
+        <p class="eyebrow">Dice Roguelike Deckbuilder · PC · Steam</p>
+        <h1 class="h1">Seferia Matrix</h1>
+        <p class="blurb">
+          Lock and roll five dice to cast spells, then stack upgrades until your
+          damage breaks the scoreboard.
+        </p>
+        <div class="btn-row">
+          <a class="btn btn--solid" href={LINKS.steamDemo} target="_blank" rel="noopener">Play the Demo</a>
+          <a class="btn btn--ghost" href={LINKS.trailer} target="_blank" rel="noopener">Watch Trailer</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- trailer -->
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow reveal">Trailer</p>
+        <div class="frame reveal">
+          <iframe
+            src={`https://www.youtube-nocookie.com/embed/${LINKS.trailerId}`}
+            title="Seferia Matrix — Trailer"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- features -->
+    <section class="section--tight">
+      <div class="container">
+        <p class="eyebrow reveal">How it plays</p>
+        <h2 class="h2 measure reveal">Yahtzee instincts meet deckbuilding depth.</h2>
+        <div class="features" style="margin-top: 3rem;">
+          <div class="feature reveal"><h3>Lock &amp; roll</h3><p>Five dice, your call each turn. Hold what works, gamble the rest, and shape the spell you need.</p></div>
+          <div class="feature reveal" data-delay="1"><h3>300+ upgrades</h3><p>Artifacts, sigils, and dice mods combine into runaway synergies. Every run builds a different engine.</p></div>
+          <div class="feature reveal" data-delay="2"><h3>Three schools</h3><p>Each school of magic brings its own signature spell — a different way to break the math wide open.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- gallery -->
+    <section class="section--tight">
+      <div class="container">
+        <p class="eyebrow reveal">Screens</p>
+        <div class="gallery-land reveal">
+          <figure><img src="/images/seferia-ss-hub.jpg" alt="Seferia Matrix academy hub" loading="lazy" /></figure>
+          <figure><img src="/images/seferia-ss-2.jpg" alt="Seferia Matrix gameplay" loading="lazy" /></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- press -->
+    <section class="section" id="press">
+      <div class="container">
+        <p class="eyebrow reveal">Press</p>
+        <div class="fact reveal">
+          <div class="fact-head">
+            <div class="sub">PC · Steam</div>
+            <h3>Seferia Matrix — Fact Sheet</h3>
+          </div>
+          <dl>
+            <div class="row"><dt>Genre</dt><dd>Dice roguelike deckbuilder</dd></div>
+            <div class="row"><dt>Platform</dt><dd>PC (Steam)</dd></div>
+            <div class="row"><dt>Release</dt><dd>November 2026 · Demo out now</dd></div>
+            <div class="row"><dt>Languages</dt><dd>English, Korean, Japanese, Simplified &amp; Traditional Chinese, French, German, Spanish (Spain &amp; Latin America), Russian, Portuguese (Brazil)</dd></div>
+            <div class="row"><dt>Developer</dt><dd>SurvivalTaktix</dd></div>
+            <div class="row"><dt>Links</dt><dd>
+              <a href={LINKS.steam} target="_blank" rel="noopener">Steam</a> ·
+              <a href={LINKS.steamDemo} target="_blank" rel="noopener">Demo</a> ·
+              <a href={LINKS.trailer} target="_blank" rel="noopener">Trailer</a>
+            </dd></div>
+          </dl>
+        </div>
+        <p class="body-dim press-note reveal">
+          Key art, screenshots, the trailer, and store text are in the press kit.
+          There's no embargo on published material.
+        </p>
+        <div class="btn-row reveal">
+          <a class="btn btn--solid" href={LINKS.pressKit} target="_blank" rel="noopener">Download Press Kit</a>
+          <a class="btn btn--ghost" href={`mailto:${LINKS.email}?subject=${encodeURIComponent('[Media Inquiry] Seferia Matrix')}`}>Press Contact</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

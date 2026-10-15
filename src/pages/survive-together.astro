@@ -1,0 +1,69 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { LINKS } from '../data/site';
+const title = 'Survive Together — SurvivalTaktix';
+const description =
+  'A co-op survivors game for 2–4 players: team up with friends and hold out against endless waves. Out now on Android and Windows via Google Play.';
+---
+<Layout title={title} description={description} ogImage="/images/st-thumb.png">
+  <main data-accent="survive">
+    <!-- hero -->
+    <section class="ghero">
+      <div class="ghero-art" aria-hidden="true">
+        <img src="/images/st-thumb.png" alt="" />
+      </div>
+      <div class="container ghero-inner">
+        <p class="eyebrow">Co-op Survivors · Android · PC</p>
+        <h1 class="h1">Survive Together</h1>
+        <p class="blurb">
+          Team up with friends in 2–4 player co-op and hold the line against endless
+          waves. It's always better together.
+        </p>
+        <div class="btn-row">
+          <a class="btn btn--solid" href={LINKS.googlePlay} target="_blank" rel="noopener">Get it on Google Play</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- screens -->
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow reveal">Screens</p>
+        <div class="gallery-phone reveal">
+          <figure><img src="/images/st-screenshot-2.png" alt="Survive Together gameplay" loading="lazy" /></figure>
+          <figure><img src="/images/st-screenshot-3.png" alt="Survive Together gameplay" loading="lazy" /></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- press -->
+    <section class="section" id="press">
+      <div class="container">
+        <p class="eyebrow reveal">Press</p>
+        <div class="fact reveal">
+          <div class="fact-head">
+            <div class="sub">Android · PC</div>
+            <h3>Survive Together — Fact Sheet</h3>
+          </div>
+          <dl>
+            <div class="row"><dt>Genre</dt><dd>Mobile co-op survivors</dd></div>
+            <div class="row"><dt>Platform</dt><dd>Android · Windows (Google Play Games on PC)</dd></div>
+            <div class="row"><dt>Release</dt><dd>Out now</dd></div>
+            <div class="row"><dt>Developer</dt><dd>SurvivalTaktix</dd></div>
+            <div class="row"><dt>Links</dt><dd>
+              <a href={LINKS.googlePlay} target="_blank" rel="noopener">Google Play</a>
+            </dd></div>
+          </dl>
+        </div>
+        <p class="body-dim press-note reveal">
+          Key art, icon, screenshots, and store text are in the press kit.
+          There's no embargo on published material.
+        </p>
+        <div class="btn-row reveal">
+          <a class="btn btn--solid" href={LINKS.pressKitSurvive} target="_blank" rel="noopener">Download Press Kit</a>
+          <a class="btn btn--ghost" href={`mailto:${LINKS.email}?subject=${encodeURIComponent('[Media Inquiry] Survive Together')}`}>Press Contact</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
