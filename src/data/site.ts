@@ -1,11 +1,11 @@
 // Single source of truth for links, game catalog, studio facts.
-// Trailer id adopted from pipeline.config outreach canon (TfWWliAYkZE).
+// Trailer = latest YouTube upload (Official Trailer 5, 2026-10-14).
 
 export const LINKS = {
   steam: 'https://store.steampowered.com/app/4515500/',
   steamDemo: 'https://store.steampowered.com/app/4612190/',
-  trailer: 'https://youtu.be/TfWWliAYkZE',
-  trailerId: 'TfWWliAYkZE',
+  trailer: 'https://youtu.be/v7JKwOFq1uA',
+  trailerId: 'v7JKwOFq1uA',
   googlePlay:
     'https://play.google.com/store/apps/details?id=com.SurvivalTaktix.ProjectST',
   discord: 'https://discord.gg/CqxzeSSYRm',
@@ -74,7 +74,7 @@ export const TIMELINE = [
   { year: '2025', title: 'SurvivalTaktix founded', body: 'Seongnam, South Korea.' },
   { year: '2025', title: 'Survive Together', body: 'Our first game, out on Android.' },
   { year: '2026', title: 'Festival selections', body: 'Seferia Matrix at Unite Seoul and IndieCraft.' },
-  { year: '2026', title: 'Seferia Matrix', body: 'Coming to Steam this November.' },
+  { year: '2026', title: 'Seferia Matrix', body: 'Coming to Steam November 9.' },
 ] as const;
 
 export const SELECTIONS = [
