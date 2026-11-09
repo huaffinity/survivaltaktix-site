@@ -10,7 +10,7 @@ export const LINKS = {
     'https://play.google.com/store/apps/details?id=com.SurvivalTaktix.ProjectST',
   discord: 'https://discord.gg/CqxzeSSYRm',
   pressKit:
-    'https://drive.google.com/file/d/1qj-ROFbE8nq6TazJSFz3EV8l2AfTeWg4/view?usp=sharing',
+    'https://drive.google.com/file/d/1XTXmb79SBZtPPxYlVtRdHOcxYfJ8T82K/view?usp=sharing',
   pressKitSurvive:
     'https://drive.google.com/file/d/1SuGD-Z0vYEYlpWvIcu9negC1wHibN_Gw/view?usp=sharing',
   email: 'Affinity@survivaltaktixs.com',
@@ -53,7 +53,7 @@ export const GAMES: Game[] = [
     slug: '/seferia-matrix',
     title: 'Seferia Matrix',
     tag: 'Dice roguelike deckbuilder',
-    packshot: '/images/seferia-packshot.jpg',
+    packshot: '/images/seferia-packshot.gif',
     trailer: LINKS.trailer,
     platforms: [
       { label: 'Steam', href: LINKS.steam },
