@@ -74,7 +74,7 @@ export const TIMELINE = [
   { year: '2025', title: 'SurvivalTaktix founded', body: 'Seongnam, South Korea.' },
   { year: '2025', title: 'Survive Together', body: 'Our first game, out on Android.' },
   { year: '2026', title: 'Festival selections', body: 'Seferia Matrix at Unite Seoul and IndieCraft.' },
-  { year: '2026', title: 'Seferia Matrix', body: 'Coming to Steam November 9.' },
+  { year: '2026', title: 'Seferia Matrix', body: 'Released on Steam November 9.' },
 ] as const;
 
 export const SELECTIONS = [
