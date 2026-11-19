@@ -10,7 +10,7 @@ export const LINKS = {
     'https://play.google.com/store/apps/details?id=com.SurvivalTaktix.ProjectST',
   discord: 'https://discord.gg/CqxzeSSYRm',
   pressKit:
-    'https://drive.google.com/file/d/1XTXmb79SBZtPPxYlVtRdHOcxYfJ8T82K/view?usp=sharing',
+    'https://drive.google.com/file/d/1lDHkcjCk6GWcoNdy4qA52G3tf--Jswo3/view?usp=sharing',
   pressKitSurvive:
     'https://drive.google.com/file/d/1SuGD-Z0vYEYlpWvIcu9negC1wHibN_Gw/view?usp=sharing',
   email: 'Affinity@survivaltaktixs.com',
